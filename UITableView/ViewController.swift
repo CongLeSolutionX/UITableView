@@ -124,4 +124,13 @@ extension ViewController: UITableViewDelegate {
     guard let sections = viewModel?.sections else { return 0 }
     return sections.count
   }
+
+  func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    let footerView = SectionFooterView(frame: .zero)
+    return footerView
+  }
+
+  func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return 40
+  }
 }
