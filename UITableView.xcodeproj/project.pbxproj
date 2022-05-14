@@ -13,6 +13,7 @@
 		4CA12839282DA41000177413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA12837282DA41000177413 /* LaunchScreen.storyboard */; };
 		4CA12842282DD57400177413 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12841282DD57400177413 /* HeaderView.swift */; };
 		4CA12844282DD58F00177413 /* TableFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12843282DD58F00177413 /* TableFooter.swift */; };
+		4CA12847282F4C5A00177413 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12846282F4C5A00177413 /* TransactionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4CA1283A282DA41000177413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CA12841282DD57400177413 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		4CA12843282DD58F00177413 /* TableFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFooter.swift; sourceTree = "<group>"; };
+		4CA12846282F4C5A00177413 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				4CA1283A282DA41000177413 /* Info.plist */,
 				4CA1282C282DA40C00177413 /* AppDelegate.swift */,
 				4CA12830282DA40C00177413 /* ViewController.swift */,
+				4CA12848282F4C5F00177413 /* Model */,
 				4CA12845282DD5A100177413 /* Views */,
 				4CA12840282DA61600177413 /* Files */,
 			);
@@ -81,6 +84,14 @@
 				4CA12843282DD58F00177413 /* TableFooter.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4CA12848282F4C5F00177413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CA12846282F4C5A00177413 /* TransactionViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 				4CA1282D282DA40C00177413 /* AppDelegate.swift in Sources */,
 				4CA12842282DD57400177413 /* HeaderView.swift in Sources */,
 				4CA12844282DD58F00177413 /* TableFooter.swift in Sources */,
+				4CA12847282F4C5A00177413 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
