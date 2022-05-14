@@ -9,11 +9,11 @@ import UIKit
 class ViewController: UIViewController {
 
   private let tableView: UITableView = {
-    let table = UITableView()
+    let table = UITableView(frame: .zero, style: .grouped)
     table.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
     if #available(iOS 15, *) {
-    // Close the gap between the Header view and section header view
-    table.sectionHeaderTopPadding = 0
+      // Close the gap between the Header view and section header view
+      table.sectionHeaderTopPadding = 0
     }
     return table
   }()
@@ -105,11 +105,11 @@ extension ViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
-// Default HeaderView
-//  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//    guard let viewModel = viewModel else { return nil }
-//    return viewModel.sections[section].title
-//  }
+  // Default Section Header View
+  //  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+  //    guard let viewModel = viewModel else { return nil }
+  //    return viewModel.sections[section].title
+  //  }
 
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let header = SectionHeaderView(frame: .zero)

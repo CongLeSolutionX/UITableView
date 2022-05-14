@@ -5,7 +5,6 @@
 //  Created by Cong Le on 5/13/22.
 //
 
-import Foundation
 import UIKit
 
 class SectionHeaderView: UIView {
