@@ -8,8 +8,6 @@
 import UIKit
 
 class SectionHeaderView: UIView {
-  static let identifier = "SectionHeaderView"
-  
   private let label: UILabel = {
     let label = UILabel()
     label.text = "SectionHeader"
