@@ -10,7 +10,8 @@ class ViewController: UIViewController {
 
   private let tableView: UITableView = {
     let table = UITableView(frame: .zero, style: .grouped)
-    table.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+    //table.register(UITableViewCell.self, forCellReuseIdentifier: "cellId") // default TableViewCell
+    table.register(PendingCellView.self, forCellReuseIdentifier: PendingCellView.identifier)
     if #available(iOS 15, *) {
       // Close the gap between the Header view and section header view
       table.sectionHeaderTopPadding = 0
@@ -81,17 +82,17 @@ class ViewController: UIViewController {
   }
 
   private func fetchData() {
-    let tx1 = Transaction(firstName: "Cong", lastname: "Le", amount: "100.00", type: .pending)
-    let tx2 = Transaction(firstName: "Kevin", lastname: "Nguyen", amount: "1000.00", type: .pending)
-    let tx3 = Transaction(firstName: "Ed", lastname: "Hoang", amount: "900.00", type: .pending)
-    let tx4 = Transaction(firstName: "Victor", lastname: "Ngo", amount: "890.00", type: .pending)
-    let tx5 = Transaction(firstName: "Henrick", lastname: "Vu", amount: "89000.00", type: .pending)
+    let tx1 = Transaction(firstName: "Cong", lastName: "Le", amount: "100.00", type: .pending)
+    let tx2 = Transaction(firstName: "Kevin", lastName: "Nguyen", amount: "1000.00", type: .pending)
+    let tx3 = Transaction(firstName: "Ed", lastName: "Hoang", amount: "900.00", type: .pending)
+    let tx4 = Transaction(firstName: "Victor", lastName: "Ngo", amount: "890.00", type: .pending)
+    let tx5 = Transaction(firstName: "Henrick", lastName: "Vu", amount: "89000.00", type: .pending)
 
-    let tx6 = Transaction(firstName: "Ngo", lastname: "Cuong", amount: "980.00", type: .posted)
-    let tx7 = Transaction(firstName: "Loc", lastname: "Dao", amount: "1090.00", type: .posted)
-    let tx8 = Transaction(firstName: "Vu", lastname: "Ho", amount: "800.00", type: .posted)
-    let tx9 = Transaction(firstName: "Nguyen", lastname: "Nguyen", amount: "910.00", type: .posted)
-    let tx10 = Transaction(firstName: "An", lastname: "Nguyen", amount: "8900.00", type: .posted)
+    let tx6 = Transaction(firstName: "Ngo", lastName: "Cuong", amount: "980.00", type: .posted)
+    let tx7 = Transaction(firstName: "Loc", lastName: "Dao", amount: "1090.00", type: .posted)
+    let tx8 = Transaction(firstName: "Vu", lastName: "Ho", amount: "800.00", type: .posted)
+    let tx9 = Transaction(firstName: "Nguyen", lastName: "Nguyen", amount: "910.00", type: .posted)
+    let tx10 = Transaction(firstName: "An", lastName: "Nguyen", amount: "8900.00", type: .posted)
 
     let section1 = TransactionSection(title: "Pending transfers", transactions: [tx1,tx2,tx3,tx4,tx5])
     let section2 = TransactionSection(title: "Posted transfers", transactions: [tx6,tx7,tx8,tx9,tx10])
@@ -110,12 +111,16 @@ extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let viewModel = viewModel else { return UITableViewCell() }
 
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+//    let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) // default tableViewCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: PendingCellView.identifier) as? PendingCellView else { return UITableViewCell() }
+
     let section = indexPath.section
+    let transaction = viewModel.sections[section].transactions[indexPath.row]
+    let fullName = "\(transaction.firstName) \(transaction.lastName)"
+    let amountText = transaction.amount
 
-    let amountText = viewModel.sections[section].transactions[indexPath.row].amount
-    cell.textLabel?.text = amountText
-
+    cell.amountLabel.text = amountText
+    cell.nameLabel.text = fullName
     return cell
   }
 }
@@ -150,5 +155,4 @@ extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
     return 40
   }
-
 }

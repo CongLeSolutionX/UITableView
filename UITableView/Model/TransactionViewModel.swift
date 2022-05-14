@@ -18,7 +18,7 @@ struct TransactionSection  {
 
 struct Transaction {
   let firstName: String
-  let lastname: String
+  let lastName: String
   let amount: String
   let type: TransationType
 }

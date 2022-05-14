@@ -16,6 +16,7 @@
 		4CA12847282F4C5A00177413 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12846282F4C5A00177413 /* TransactionViewModel.swift */; };
 		4CA1284B282F792600177413 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1284A282F792600177413 /* SectionHeaderView.swift */; };
 		4CA1284D282F869800177413 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1284C282F869700177413 /* FooterView.swift */; };
+		4CA1284F282F895E00177413 /* PendingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1284E282F895E00177413 /* PendingCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4CA12846282F4C5A00177413 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		4CA1284A282F792600177413 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		4CA1284C282F869700177413 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		4CA1284E282F895E00177413 /* PendingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				4CA1284A282F792600177413 /* SectionHeaderView.swift */,
 				4CA12843282DD58F00177413 /* SectionFooterView.swift */,
 				4CA1284C282F869700177413 /* FooterView.swift */,
+				4CA1284E282F895E00177413 /* PendingCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA1284F282F895E00177413 /* PendingCellView.swift in Sources */,
 				4CA12831282DA40C00177413 /* ViewController.swift in Sources */,
 				4CA1284D282F869800177413 /* FooterView.swift in Sources */,
 				4CA1284B282F792600177413 /* SectionHeaderView.swift in Sources */,
