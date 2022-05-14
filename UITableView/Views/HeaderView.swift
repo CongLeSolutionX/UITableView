@@ -33,13 +33,7 @@ class HeaderView: UIView {
     addSubview(label)
     setupConstraints()
   }
-//  override init(reuseIdentifier: String?) {
-//    super.init(reuseIdentifier: reuseIdentifier)
-//    contentView.addSubview(label)
-//    contentView.backgroundColor = .systemOrange
-//    contentView.frame = .zero
-//  }
-
+  
   override func layoutSubviews() {
     super.layoutSubviews()
   }
