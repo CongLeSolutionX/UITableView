@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     let table = UITableView(frame: .zero, style: .grouped)
     //table.register(UITableViewCell.self, forCellReuseIdentifier: "cellId") // default TableViewCell
     table.register(PendingCellView.self, forCellReuseIdentifier: PendingCellView.identifier)
+    table.register(PostedCellView.self, forCellReuseIdentifier: PostedCellView.identifier)
     if #available(iOS 15, *) {
       // Close the gap between the Header view and section header view
       table.sectionHeaderTopPadding = 0
@@ -111,17 +112,27 @@ extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let viewModel = viewModel else { return UITableViewCell() }
 
-//    let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) // default tableViewCell
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: PendingCellView.identifier) as? PendingCellView else { return UITableViewCell() }
-
+    //let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) // default tableViewCell
     let section = indexPath.section
     let transaction = viewModel.sections[section].transactions[indexPath.row]
     let fullName = "\(transaction.firstName) \(transaction.lastName)"
     let amountText = transaction.amount
+    let transactionType = transaction.type
 
-    cell.amountLabel.text = amountText
-    cell.nameLabel.text = fullName
-    return cell
+    switch transactionType {
+    case .pending:
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: PendingCellView.identifier, for: indexPath) as? PendingCellView else { return UITableViewCell() }
+
+      cell.nameLabel.text = fullName
+      cell.amountLabel.text = amountText
+      return cell
+    case .posted:
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: PostedCellView.identifier, for: indexPath) as? PostedCellView else { return UITableViewCell() }
+      cell.typeLabel.text = transactionType.rawValue
+      cell.nameLabel.text = fullName
+      cell.amountLabel.text = amountText
+      return cell
+    }
   }
 }
 

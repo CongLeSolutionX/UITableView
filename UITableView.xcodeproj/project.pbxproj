@@ -17,6 +17,7 @@
 		4CA1284B282F792600177413 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1284A282F792600177413 /* SectionHeaderView.swift */; };
 		4CA1284D282F869800177413 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1284C282F869700177413 /* FooterView.swift */; };
 		4CA1284F282F895E00177413 /* PendingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1284E282F895E00177413 /* PendingCellView.swift */; };
+		4CA1285328306DDF00177413 /* PostedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1285228306DDF00177413 /* PostedCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4CA1284A282F792600177413 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		4CA1284C282F869700177413 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		4CA1284E282F895E00177413 /* PendingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingCellView.swift; sourceTree = "<group>"; };
+		4CA1285228306DDF00177413 /* PostedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				4CA12843282DD58F00177413 /* SectionFooterView.swift */,
 				4CA1284C282F869700177413 /* FooterView.swift */,
 				4CA1284E282F895E00177413 /* PendingCellView.swift */,
+				4CA1285228306DDF00177413 /* PostedCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				4CA1282D282DA40C00177413 /* AppDelegate.swift in Sources */,
 				4CA12842282DD57400177413 /* HeaderView.swift in Sources */,
 				4CA12844282DD58F00177413 /* SectionFooterView.swift in Sources */,
+				4CA1285328306DDF00177413 /* PostedCellView.swift in Sources */,
 				4CA12847282F4C5A00177413 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

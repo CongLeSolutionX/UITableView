@@ -25,5 +25,5 @@ struct Transaction {
 
 enum TransationType: String {
   case pending = "Pending"
-  case posted = "Posted "
+  case posted = "Posted"
 }
