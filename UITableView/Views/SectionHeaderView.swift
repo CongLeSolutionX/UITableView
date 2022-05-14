@@ -1,18 +1,19 @@
 //
-//  TableHeaderSectionView.swift
-//  TableHeaderSectionView
+//  SectionHeaderView.swift
+//  UITableView
 //
-//  Created by Cong Le on 5/12/22.
+//  Created by Cong Le on 5/13/22.
 //
 
+import Foundation
 import UIKit
 
-class HeaderView: UIView {
-  static let identifier = "HeaderView"
-
+class SectionHeaderView: UIView {
+  static let identifier = "SectionHeaderView"
+  
   private let label: UILabel = {
     let label = UILabel()
-    label.text = "Header"
+    label.text = "SectionHeader"
     label.font = .systemFont(ofSize: 22, weight: .semibold)
     label.textAlignment = .center
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -22,16 +23,16 @@ class HeaderView: UIView {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = .orange
+    backgroundColor = .yellow
     commonInit()
-  }
-
-  override var intrinsicContentSize: CGSize {
-    return CGSize(width: UIView.noIntrinsicMetric, height: 104)
   }
 
   override func layoutSubviews() {
     super.layoutSubviews()
+  }
+
+  override var intrinsicContentSize: CGSize {
+    return CGSize(width: UIView.noIntrinsicMetric, height: 104)
   }
 
   required init?(coder: NSCoder) {
@@ -42,7 +43,7 @@ class HeaderView: UIView {
     addSubview(label)
     setupConstraints()
   }
-
+  
   func setupConstraints() {
     NSLayoutConstraint.activate([
       label.centerXAnchor.constraint(equalTo: centerXAnchor),

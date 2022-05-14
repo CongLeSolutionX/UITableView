@@ -11,6 +11,10 @@ class ViewController: UIViewController {
   private let tableView: UITableView = {
     let table = UITableView()
     table.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+    if #available(iOS 15, *) {
+    // Close the gap between the Header view and section header view
+    table.sectionHeaderTopPadding = 0
+    }
     return table
   }()
 
@@ -30,7 +34,7 @@ class ViewController: UIViewController {
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    tableView.frame = view.bounds
+    tableView.frame = view.bounds // Otherwise, we need to do AutoLayout manually for this
   }
 
   func setupTableView() {
@@ -101,14 +105,19 @@ extension ViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
+// Default HeaderView
+//  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//    guard let viewModel = viewModel else { return nil }
+//    return viewModel.sections[section].title
+//  }
 
-  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    guard let viewModel = viewModel else { return nil }
-    return viewModel.sections[section].title
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let header = SectionHeaderView(frame: .zero)
+    return header
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 40
+    return 70
   }
 
   func numberOfSections(in tableView: UITableView) -> Int {
