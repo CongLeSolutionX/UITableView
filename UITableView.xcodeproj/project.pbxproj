@@ -11,6 +11,8 @@
 		4CA12831282DA40C00177413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12830282DA40C00177413 /* ViewController.swift */; };
 		4CA12836282DA41000177413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CA12835282DA41000177413 /* Assets.xcassets */; };
 		4CA12839282DA41000177413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA12837282DA41000177413 /* LaunchScreen.storyboard */; };
+		4CA12842282DD57400177413 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12841282DD57400177413 /* HeaderView.swift */; };
+		4CA12844282DD58F00177413 /* TableFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12843282DD58F00177413 /* TableFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		4CA12835282DA41000177413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CA12838282DA41000177413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CA1283A282DA41000177413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CA12841282DD57400177413 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		4CA12843282DD58F00177413 /* TableFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +56,31 @@
 		4CA1282B282DA40C00177413 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				4CA1283A282DA41000177413 /* Info.plist */,
 				4CA1282C282DA40C00177413 /* AppDelegate.swift */,
 				4CA12830282DA40C00177413 /* ViewController.swift */,
-				4CA12835282DA41000177413 /* Assets.xcassets */,
-				4CA12837282DA41000177413 /* LaunchScreen.storyboard */,
-				4CA1283A282DA41000177413 /* Info.plist */,
+				4CA12845282DD5A100177413 /* Views */,
+				4CA12840282DA61600177413 /* Files */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		4CA12840282DA61600177413 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CA12835282DA41000177413 /* Assets.xcassets */,
+				4CA12837282DA41000177413 /* LaunchScreen.storyboard */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		4CA12845282DD5A100177413 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CA12841282DD57400177413 /* HeaderView.swift */,
+				4CA12843282DD58F00177413 /* TableFooter.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +155,8 @@
 			files = (
 				4CA12831282DA40C00177413 /* ViewController.swift in Sources */,
 				4CA1282D282DA40C00177413 /* AppDelegate.swift in Sources */,
+				4CA12842282DD57400177413 /* HeaderView.swift in Sources */,
+				4CA12844282DD58F00177413 /* TableFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
