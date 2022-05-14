@@ -1,17 +1,18 @@
 //
-//  TableHeaderSectionView.swift
-//  TableHeaderSectionView
+//  FooterView.swift
+//  UITableView
 //
-//  Created by Cong Le on 5/12/22.
+//  Created by Cong Le on 5/13/22.
 //
 
+import Foundation
 import UIKit
 
-class HeaderView: UIView {
-  
+class FooterView: UIView {
+
   private let label: UILabel = {
     let label = UILabel()
-    label.text = "Header"
+    label.text = "Footer"
     label.font = .systemFont(ofSize: 22, weight: .semibold)
     label.textAlignment = .center
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +22,7 @@ class HeaderView: UIView {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = .orange
+    backgroundColor = .systemBlue
     commonInit()
   }
 

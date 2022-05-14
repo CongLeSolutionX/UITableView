@@ -15,6 +15,7 @@
 		4CA12844282DD58F00177413 /* SectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12843282DD58F00177413 /* SectionFooterView.swift */; };
 		4CA12847282F4C5A00177413 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12846282F4C5A00177413 /* TransactionViewModel.swift */; };
 		4CA1284B282F792600177413 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1284A282F792600177413 /* SectionHeaderView.swift */; };
+		4CA1284D282F869800177413 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1284C282F869700177413 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4CA12843282DD58F00177413 /* SectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFooterView.swift; sourceTree = "<group>"; };
 		4CA12846282F4C5A00177413 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		4CA1284A282F792600177413 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		4CA1284C282F869700177413 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				4CA12841282DD57400177413 /* HeaderView.swift */,
 				4CA1284A282F792600177413 /* SectionHeaderView.swift */,
 				4CA12843282DD58F00177413 /* SectionFooterView.swift */,
+				4CA1284C282F869700177413 /* FooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CA12831282DA40C00177413 /* ViewController.swift in Sources */,
+				4CA1284D282F869800177413 /* FooterView.swift in Sources */,
 				4CA1284B282F792600177413 /* SectionHeaderView.swift in Sources */,
 				4CA1282D282DA40C00177413 /* AppDelegate.swift in Sources */,
 				4CA12842282DD57400177413 /* HeaderView.swift in Sources */,

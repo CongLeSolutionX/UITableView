@@ -37,11 +37,12 @@ class ViewController: UIViewController {
     tableView.frame = view.bounds // Otherwise, we need to do AutoLayout manually for this
   }
 
-  func setupTableView() {
+  private func setupTableView() {
     view.addSubview(tableView)
     tableView.backgroundColor = .systemBackground
 
     setupTableViewHeader()
+    setupTableViewFooter()
 
     tableView.dataSource = self
     tableView.delegate = self
@@ -61,6 +62,22 @@ class ViewController: UIViewController {
     header.frame.size = size
 
     tableView.tableHeaderView = header
+  }
+
+  private func setupTableViewFooter() {
+    let footer = FooterView(frame: .zero)
+
+    // Set frame size before populate view to have initial size
+    var size = footer.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+    size.width = UIScreen.main.bounds.width
+    footer.frame.size = size
+
+    // Recalculate header size after populated with content
+    size = footer.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+    size.width = UIScreen.main.bounds.width
+    footer.frame.size = size
+
+    tableView.tableFooterView = footer
   }
 
   private func fetchData() {
@@ -133,4 +150,5 @@ extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
     return 40
   }
+
 }
