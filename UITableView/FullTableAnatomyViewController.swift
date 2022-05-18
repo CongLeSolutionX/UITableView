@@ -6,7 +6,8 @@
 //
 
 import UIKit
-class ViewController: UIViewController {
+
+class FullTableAnatomyViewController: UIViewController {
 
   private let tableView: UITableView = {
     let table = UITableView(frame: .zero, style: .grouped)
@@ -103,7 +104,7 @@ class ViewController: UIViewController {
 }
 
 //MARK: - UITableViewDataSource
-extension ViewController: UITableViewDataSource {
+extension FullTableAnatomyViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard let viewModel = viewModel else { return 0 }
     return viewModel.sections[section].transactions.count
@@ -137,7 +138,7 @@ extension ViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension ViewController: UITableViewDelegate {
+extension FullTableAnatomyViewController: UITableViewDelegate {
   // Default Section Header View
   //  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
   //    guard let viewModel = viewModel else { return nil }
