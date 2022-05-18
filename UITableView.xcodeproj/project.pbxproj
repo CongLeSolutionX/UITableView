@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4CA1282D282DA40C00177413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1282C282DA40C00177413 /* AppDelegate.swift */; };
-		4CA12831282DA40C00177413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12830282DA40C00177413 /* ViewController.swift */; };
+		4CA12831282DA40C00177413 /* FullTableAnatomyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12830282DA40C00177413 /* FullTableAnatomyViewController.swift */; };
 		4CA12836282DA41000177413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CA12835282DA41000177413 /* Assets.xcassets */; };
 		4CA12839282DA41000177413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA12837282DA41000177413 /* LaunchScreen.storyboard */; };
 		4CA12842282DD57400177413 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA12841282DD57400177413 /* HeaderView.swift */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		4CA12829282DA40C00177413 /* UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA1282C282DA40C00177413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4CA12830282DA40C00177413 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CA12830282DA40C00177413 /* FullTableAnatomyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTableAnatomyViewController.swift; sourceTree = "<group>"; };
 		4CA12835282DA41000177413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CA12838282DA41000177413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CA1283A282DA41000177413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 			children = (
 				4CA1283A282DA41000177413 /* Info.plist */,
 				4CA1282C282DA40C00177413 /* AppDelegate.swift */,
-				4CA12830282DA40C00177413 /* ViewController.swift */,
+				4CA12830282DA40C00177413 /* FullTableAnatomyViewController.swift */,
 				4CA12848282F4C5F00177413 /* Model */,
 				4CA12845282DD5A100177413 /* Views */,
 				4CA12840282DA61600177413 /* Files */,
@@ -177,7 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CA1284F282F895E00177413 /* PendingCellView.swift in Sources */,
-				4CA12831282DA40C00177413 /* ViewController.swift in Sources */,
+				4CA12831282DA40C00177413 /* FullTableAnatomyViewController.swift in Sources */,
 				4CA1284D282F869800177413 /* FooterView.swift in Sources */,
 				4CA1284B282F792600177413 /* SectionHeaderView.swift in Sources */,
 				4CA1282D282DA40C00177413 /* AppDelegate.swift in Sources */,

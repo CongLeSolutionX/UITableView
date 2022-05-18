@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.backgroundColor = .systemRed
 
     // Setup the view controllers
-    let mainVC = ViewController()
+    let mainVC = FullTableAnatomyViewController()
     navigationController = UINavigationController(rootViewController: mainVC)
     window?.rootViewController = navigationController
     return true
